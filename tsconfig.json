@@ -1,0 +1,27 @@
+{
+    "compilerOptions": {
+        /* Basic Options */
+        "module": "commonjs",
+        "target": "es5",
+        "lib": ["es6", "dom"],
+        "outDir": "./dist",
+        
+        /* Strict Type-Checking options */
+        "strict": true,
+        "noImplicitAny": true,
+        "strictNullChecks": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+
+        /* Modue Resolution options */
+        "moduleResolution": "node",
+        "baseUrl": "./",
+        "paths": {
+            "@root/*": ["*"], 
+            "Configstore": ["@types/configstore"]
+        },
+        "esModuleInterop": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true
+    }
+}

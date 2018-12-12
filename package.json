@@ -3,12 +3,16 @@
   "version": "1.0.0",
   "description": "Sample CLI",
   "main": "./dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RobinHames/SampleCli"
+  },
   "files": [
     "/dist"
   ],
   "scripts": {
     "start": "node dist/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha -r ts-node/register -r tsconfig-paths/register src/**/*.test.ts --reporter mochawesome --reporter-options reportDir=TestResults"
   },
   "author": "Robin Hames",
   "license": "ISC",

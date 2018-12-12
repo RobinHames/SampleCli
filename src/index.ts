@@ -2,7 +2,7 @@
 
 import { CommandProcessor } from "./commandProcessor";
 import SERVICE_IDENTIFIER from "./ioc/identifiers";
-import container from "./ioc/inversify.config";
+import { container } from "./ioc/inversify.config";
 import CommandArguments from "./models/commandArguments";
 
 // tslint:disable-next-line:no-var-requires

@@ -1,5 +1,5 @@
 import { inject, injectable } from "inversify";
-import CommandHandler from "./commands/commandHandler";
+import { CommandHandler } from "./commands/commandHandler";
 import { ErrorHandler } from "./errors/errorHandler";
 import SERVICE_IDENTIFIER from "./ioc/identifiers";
 import CommandArguments from "./models/commandArguments";

@@ -3,11 +3,10 @@ import { Question } from "inquirer";
 import { inject, injectable } from "inversify";
 import { ErrorHandler } from "../errors/errorHandler";
 import SERVICE_IDENTIFIER from "../ioc/identifiers";
-import CommandArguments from "../models/commandArguments";
 import { HelloApp } from "../shared/helloApp";
 import { ProjectConfig } from "../shared/projectConfig";
 import PROJECT_CONFIG_KEY from "../shared/projectConfigKeys";
-import CommandHandler from "./commandHandler";
+import { CommandHandler } from "./commandHandler";
 
 @injectable()
 export class InitCommandHandler implements CommandHandler {
@@ -24,8 +23,7 @@ export class InitCommandHandler implements CommandHandler {
         this.projectConfig = projectConfig.initialiseNewConfig();
     }
 
-    // tslint:disable-next-line:variable-name
-    public async run(_commandArguments: CommandArguments) {
+    public async run() {
         try {
             this.helloApp.info();
             await this.configureProjectName();

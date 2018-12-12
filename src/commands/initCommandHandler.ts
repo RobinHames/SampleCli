@@ -1,11 +1,11 @@
 import * as inquirer from "inquirer";
 import { Question } from "inquirer";
-import { inject, injectable } from "inversify";
+import { inject, injectable, named } from "inversify";
 import { ErrorHandler } from "../errors/errorHandler";
 import SERVICE_IDENTIFIER from "../ioc/identifiers";
 import { HelloApp } from "../shared/helloApp";
 import { ProjectConfig } from "../shared/projectConfig";
-import PROJECT_CONFIG_KEY from "../shared/projectConfigKeys";
+import { PROJECT_CONFIG_KEY, PROJECT_CONFIG_TAGS } from "../shared/projectConfigKeys";
 import { CommandHandler } from "./commandHandler";
 
 @injectable()
@@ -17,10 +17,11 @@ export class InitCommandHandler implements CommandHandler {
 
     public constructor(@inject(SERVICE_IDENTIFIER.ERROR_HANDLER_FACTORY) errorHandlerFactory: () => ErrorHandler,
                        @inject(SERVICE_IDENTIFIER.HELLO_APP) helloApp: HelloApp,
-                       @inject(SERVICE_IDENTIFIER.PROJECT_CONFIG) projectConfig: ProjectConfig) {
+                       @inject(SERVICE_IDENTIFIER.PROJECT_CONFIG) @named(PROJECT_CONFIG_TAGS.PROJECT_CONFIG_INIT)
+                            projectConfig: ProjectConfig) {
         this.errorHandlerFactory = errorHandlerFactory;
         this.helloApp = helloApp;
-        this.projectConfig = projectConfig.initialiseNewConfig();
+        this.projectConfig = projectConfig;
     }
 
     public async run() {

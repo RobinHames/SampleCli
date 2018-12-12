@@ -50,6 +50,9 @@ npm-debug.log
 .vscode
 .history
 
+# Test Results
+[Tt]est[Rr]esult*/
+
 # yarn
 yarn.lock
 

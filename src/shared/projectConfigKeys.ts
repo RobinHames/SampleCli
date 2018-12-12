@@ -1,6 +1,8 @@
-const PROJECT_CONFIG_KEY = {
+export const PROJECT_CONFIG_KEY = {
     PROJECT_NAME: "ProjectName",
     SCRIPTS_FOLDER: "Scripts",
 };
 
-export default PROJECT_CONFIG_KEY;
+export const PROJECT_CONFIG_TAGS = {
+    PROJECT_CONFIG_INIT: "ProjectConfigInit",
+};

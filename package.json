@@ -25,16 +25,26 @@
     "reflect-metadata": "^0.1.12"
   },
   "devDependencies": {
-    "@types/configstore": "^2.1.1",
+    "@types/chai": "^4.1.7",
+    "@types/configstore": "^4.0.0",
     "@types/figlet": "^1.2.0",
     "@types/inquirer": "0.0.43",
+    "@types/mocha": "^5.2.5",
     "@types/node": "^10.12.10",
+    "chai": "^4.2.0",
     "del": "^3.0.0",
+    "genversion": "^2.1.0",
     "gulp": "^3.9.1",
+    "gulp-string-replace": "^1.1.2",
     "gulp-tslint": "^8.1.3",
     "gulp-typescript": "^5.0.0-alpha.3",
+    "mocha": "^5.2.0",
+    "mochawesome": "^3.1.1",
     "run-sequence": "^2.2.1",
+    "ts-node": "^7.0.1",
+    "tsconfig-paths": "^3.7.0",
     "tslint": "^5.11.0",
+    "typemoq": "^2.1.0",
     "typescript": "^3.1.6"
   }
 }
